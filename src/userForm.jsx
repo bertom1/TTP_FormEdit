@@ -26,7 +26,7 @@ class UserForm extends React.Component {
         this.setState({
             clickedButton: false,
             //reupdate to first and last name to avoid error when saving after cancelling
-            //i.e editing first name, cancelling, then editing and saving last name
+            //e.g editing first name, cancelling, then editing and saving last name
             newFirst: this.state.firstName,
             newLast: this.state.lastName
         })
@@ -40,8 +40,8 @@ class UserForm extends React.Component {
     editForm = () => {
         return (
         <div id = 'editing'>
-            <input type = 'text' onChange = {this.updateFirst} defaultValue = {this.state.firstName} ></input>
-            <input type = 'text' onChange = {this.updateLast} defaultValue = {this.state.lastName} ></input>
+            <input type = 'text' onChange = {this.updateFirst} placeholder = {this.state.firstName} ></input>
+            <input type = 'text' onChange = {this.updateLast} placeholder = {this.state.lastName} ></input>
             <button onClick = {this.submitSave}>Save</button>
             <button onClick = {this.cancel}>cancel</button>
         </div>)
