@@ -5,8 +5,8 @@ class UserForm extends React.Component {
         super(props);
         this.state = {
             clickedButton: false,
-            firstName: 'First Name',
-            lastName: 'Last Name',
+            firstName: '',
+            lastName: '',
             newFirst: '',
             newLast: ''
         }
@@ -49,8 +49,8 @@ class UserForm extends React.Component {
     display = () => {
         return (
         <div id = 'finalDisplay'>
-            <div id = 'fn'>{this.state.firstName}</div>
-            <div id = 'ln'>{this.state.lastName}</div>
+            <div id = 'fn'>First Name: {this.state.firstName}</div>
+            <div id = 'ln'>Last Name: {this.state.lastName}</div>
             <button onClick = {this.showEdit}>Edit</button>
         </div>)
     }
